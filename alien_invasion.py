@@ -2,17 +2,14 @@ import sys
 from time import sleep
 import pygame
 
-from alien import Alien
-from game_stats import GameStats
-from bullet import Bullet
-from scoreboard import Scoreboard
-from button import Button
-from game_stats import GameStats
-from scoreboard import Scoreboard
-from bullet import Bullet
-from alien import Alien
 from settings import Settings
+from game_stats import GameStats
+from button import Button
+from scoreboard import Scoreboard
 from ship import Ship
+from bullet import Bullet
+from alien import Alien
+
 
 
 class AlienInvasion:
