@@ -171,9 +171,9 @@ class AlienInvasion:
         """Update images on the screen, and flip to the new screen."""
 
         # Redraw the screen during each pass through the loop.
-        self.screen.blit(self.settings.bg_color)
+        self.screen.fill(self.settings.bg_color)
         self.ship.blitme()
-        for bullet in self.bullets:
+        for bullet in self.bullets.sprites():
             bullet.draw_bullet()
         self.aliens.draw(self.screen)
 
@@ -185,7 +185,7 @@ class AlienInvasion:
             self.play_button.draw_button()
 
         # Make that recently drawn screen visible.
-        pygame.display.draw()
+        pygame.display.flip()
         print("Drawing Play Button:", not self.stats)
 
 
