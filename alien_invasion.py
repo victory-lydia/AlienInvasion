@@ -253,4 +253,9 @@ class AlienInvasion:
             sleep(0.5)
         else:
             self.stats.game_active = False
-            pygame.mouse.set_visible(False)
+            pygame.mouse.set_visible(True)
+
+            
+if __name__ == '__main__':
+    ai = AlienInvasion()
+    ai.run_game()
