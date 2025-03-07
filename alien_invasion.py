@@ -220,6 +220,7 @@ class AlienInvasion:
             # Destroy existing bullets and create new fleet.
             self.bullets.empty()
             self._create_fleet()
+            self.settings.increase_speed()
 
             # Increase level.
             self.stats.level += 1
@@ -229,6 +230,7 @@ class AlienInvasion:
         """Respond appropriately if any aliens have reached an edge."""
         for alien in self.aliens.sprites():
             if alien.check_edges():
+                self._change_fleet_direction()
                 break
 
     def _change_fleet_direction(self):
