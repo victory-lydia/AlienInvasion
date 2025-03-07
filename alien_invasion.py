@@ -186,7 +186,7 @@ class AlienInvasion:
 
         # Make that recently drawn screen visible.
         pygame.display.flip()
-        print("Drawing Play Button:", not self.stats)
+        print("Drawing Play Button:", not self.stats.game_active)
 
 
     def _update_bullets(self):
